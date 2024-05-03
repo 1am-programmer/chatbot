@@ -12,8 +12,6 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-
-
 function App() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
@@ -85,7 +83,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data)
+        console.log(data);
         // console.log(data.choices[0].messages.content);
         setMessages([
           ...chatMessages,
@@ -96,36 +94,31 @@ function App() {
           },
         ]);
         setTyping(false);
-
-      
       });
-
-      
   }
   return (
     <div className="flex flex-col h-screen w-full">
-      <h1 className="font-bold text-2xl md:text-3xl lg:text-3xl text-center text-blue-400">AI for Bros</h1>
-    
-        <MainContainer >
-          <ChatContainer >
-            <MessageList
-              scrollBehavior="smooth"
-              typingIndicator={
-                typing ? (
-                  <TypingIndicator content="Daniel's Ai is typing" />
-                ) : null
-              }
-        
-            >
-              {messages.map((message, index) => {
-                return <Message key={index} model={message} />;
-              })}
-            </MessageList>
-            <MessageInput placeholder="Type a message" onSend={handleSend} />
-          </ChatContainer>
-        </MainContainer>
+      <h1 className="font-bold text-2xl p-4 md:text-3xl lg:text-3xl text-center text-blue-400">
+        Daniel's AI{" "}
+      </h1>
 
-      
+      <MainContainer>
+        <ChatContainer>
+          <MessageList
+            scrollBehavior="smooth"
+            typingIndicator={
+              typing ? (
+                <TypingIndicator content="Daniel's Ai is typing" />
+              ) : null
+            }
+          >
+            {messages.map((message, index) => {
+              return <Message key={index} model={message} />;
+            })}
+          </MessageList>
+          <MessageInput placeholder="Type a message" onSend={handleSend} />
+        </ChatContainer>
+      </MainContainer>
     </div>
   );
 }
