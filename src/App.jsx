@@ -115,7 +115,7 @@ function App() {
           </MessageList>
           <MessageInput
             placeholder="Talk to Daniel's ai"
-            className="bg-audit my-4"
+            className="bg-audit relativ fixed bottom-0 w-full my-3"
             onSend={handleSend}
           />
         </ChatContainer>
