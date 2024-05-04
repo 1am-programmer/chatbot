@@ -97,13 +97,14 @@ function App() {
       });
   }
   return (
-    <div className=" ">
-      <MainContainer className="flex flex-col w-full container min-h-screen ">
-        <h1 className="text-center py-2 text-blue-400 font-bold">
+    <div className="bg-audit ">
+      <MainContainer className="flex flex-col w-full md:h-screen min-h-[90vh] bg-audit ">
+        <h1 className="text-2xl text-center py-2 text-blue-400 font-bold ">
           Ai for bro's
         </h1>
-        <ChatContainer>
+        <ChatContainer className="bg-audit">
           <MessageList
+            className=" bg-audit"
             scrollBehavior="smooth"
             typingIndicator={
               typing ? (
@@ -117,7 +118,7 @@ function App() {
           </MessageList>
           <MessageInput
             placeholder="Talk to Daniel's ai"
-            className="mt-auto"
+            className="bg-audit"
             onSend={handleSend}
           />
         </ChatContainer>
