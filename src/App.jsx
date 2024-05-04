@@ -94,14 +94,14 @@ function App() {
       });
   }
   return (
-    <div className="bg-audit  ">
-      <MainContainer className="flex flex-col w-full min-h-screen bg-audit py-5 ">
+    <div className="bg-audit">
+      <MainContainer className="flex flex-col w-full h-screen bg-transparent py-5 ">
         <h1 className="text-2xl text-center text-blue-400 font-bold ">
           Ai for bro's
         </h1>
-        <ChatContainer className="bg-audit">
+        <ChatContainer className="bg-transparent">
           <MessageList
-            className=" bg-audit"
+            className=" bg-transparent"
             scrollBehavior="smooth"
             typingIndicator={
               typing ? (
@@ -110,14 +110,12 @@ function App() {
             }
           >
             {messages.map((message, index) => {
-              return (
-                <Message key={index} model={message} className=" bg-audit" />
-              );
+              return <Message key={index} model={message} />;
             })}
           </MessageList>
           <MessageInput
             placeholder="Talk to Daniel's ai"
-            className="bg-audit"
+            className="bg-audit my-4"
             onSend={handleSend}
           />
         </ChatContainer>
