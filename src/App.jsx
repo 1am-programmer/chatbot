@@ -98,7 +98,7 @@ function App() {
   }
   return (
     <div className="flex flex-col h-screen w-full">
-      <h1 className="font-bold text-2xl p-4 md:text-3xl lg:text-3xl text-center text-blue-400">
+      <h1 className="font-bold text-2xl py-3 md:text-3xl lg:text-3xl text-center text-blue-400">
         Daniel's AI{" "}
       </h1>
 
@@ -116,7 +116,7 @@ function App() {
               return <Message key={index} model={message} />;
             })}
           </MessageList>
-          <MessageInput placeholder="Type a message" onSend={handleSend} />
+          <MessageInput placeholder="Talk to Daniel's ai" onSend={handleSend} />
         </ChatContainer>
       </MainContainer>
     </div>
