@@ -98,7 +98,7 @@ function App() {
   }
   return (
     <div className="bg-audit ">
-      <MainContainer className="flex flex-col w-full md:h-screen min-h-[90vh] bg-audit ">
+      <MainContainer className="flex flex-col w-full md:h-screen h-screen bg-audit ">
         <h1 className="text-2xl text-center py-2 text-blue-400 font-bold ">
           Ai for bro's
         </h1>
@@ -113,7 +113,9 @@ function App() {
             }
           >
             {messages.map((message, index) => {
-              return <Message key={index} model={message} />;
+              return (
+                <Message key={index} model={message} className=" bg-audit" />
+              );
             })}
           </MessageList>
           <MessageInput
