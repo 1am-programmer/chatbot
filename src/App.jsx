@@ -96,7 +96,7 @@ function App() {
   return (
     <div className="bg-audit">
       <MainContainer className="flex flex-col w-full h-screen bg-transparent py-5 ">
-        <h1 className="text-2xl text-center text-blue-400 font-bold ">
+        <h1 className="text-2xl text-center text-blue-400 pb-2 font-bold ">
           Ai for bro's
         </h1>
         <ChatContainer className="bg-transparent">
@@ -115,7 +115,7 @@ function App() {
           </MessageList>
           <MessageInput
             placeholder="Talk to Daniel's ai"
-            className="bg-audit relativ fixed bottom-0 w-full my-3"
+            className="bg-audit my-5"
             onSend={handleSend}
           />
         </ChatContainer>
