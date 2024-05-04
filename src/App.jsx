@@ -98,33 +98,28 @@ function App() {
   }
   return (
     <div className=" ">
-      <div className="flex flex-col overflow-hidden h-screen">
-        <h1 className="font-bold text-2xl py-2 md:text-3xl lg:text-3xl text-center text-blue-400">
-          Daniel's AI{" "}
-        </h1>
-
-        <MainContainer>
-          <ChatContainer>
-            <MessageList
-              scrollBehavior="smooth"
-              typingIndicator={
-                typing ? (
-                  <TypingIndicator content="Daniel's Ai is typing" />
-                ) : null
-              }
-            >
-              {messages.map((message, index) => {
-                return <Message key={index} model={message} />;
-              })}
-            </MessageList>
-            <MessageInput
-              placeholder="Talk to Daniel's ai"
-              // className="mt-auto"
-              onSend={handleSend}
-            />
-          </ChatContainer>
-        </MainContainer>
-      </div>
+      <MainContainer className="flex flex-col w-full container h-screen ">
+        <h1 className="text-center py-2">Hello</h1>
+        <ChatContainer>
+          <MessageList
+            scrollBehavior="smooth"
+            typingIndicator={
+              typing ? (
+                <TypingIndicator content="Daniel's Ai is typing" />
+              ) : null
+            }
+          >
+            {messages.map((message, index) => {
+              return <Message key={index} model={message} />;
+            })}
+          </MessageList>
+          <MessageInput
+            placeholder="Talk to Daniel's ai"
+            className="mt-auto"
+            onSend={handleSend}
+          />
+        </ChatContainer>
+      </MainContainer>
     </div>
   );
 }
