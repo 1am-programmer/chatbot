@@ -98,8 +98,10 @@ function App() {
   }
   return (
     <div className=" ">
-      <MainContainer className="flex flex-col w-full container h-screen ">
-        <h1 className="text-center py-2">Hello</h1>
+      <MainContainer className="flex flex-col w-full container min-h-screen ">
+        <h1 className="text-center py-2 text-blue-400 font-bold">
+          Ai for bro's
+        </h1>
         <ChatContainer>
           <MessageList
             scrollBehavior="smooth"
