@@ -1,7 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import "@chatscope/chat-ui-kit-style/dist/default/style.min.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -97,9 +94,9 @@ function App() {
       });
   }
   return (
-    <div className="bg-audit ">
+    <div className="bg-audit h-screen p- ">
       <MainContainer className="flex flex-col w-full md:h-screen h-screen bg-audit ">
-        <h1 className="text-2xl text-center py-2 text-blue-400 font-bold ">
+        <h1 className="text-2xl text-center text-blue-400 font-bold ">
           Ai for bro's
         </h1>
         <ChatContainer className="bg-audit">
