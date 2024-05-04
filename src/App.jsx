@@ -94,8 +94,8 @@ function App() {
       });
   }
   return (
-    <div className="bg-audit h-screen p- ">
-      <MainContainer className="flex flex-col w-full md:h-screen h-screen bg-audit ">
+    <div className="bg-audit  ">
+      <MainContainer className="flex flex-col w-full min-h-screen bg-audit py-5 ">
         <h1 className="text-2xl text-center text-blue-400 font-bold ">
           Ai for bro's
         </h1>
