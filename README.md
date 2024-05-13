@@ -1,6 +1,5 @@
-# React + Vite
 
-# chatbot-
+# chatbot
 
 Chatbot with ChatGPT OpenAI 3.5 Turbo API and React Vite
 This project is a Chatbot built using React Vite and powered by the OpenAI GPT-3.5 Turbo API. The Chatbot can generate human-like responses based on the input it receives.
